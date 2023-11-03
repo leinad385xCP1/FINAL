@@ -16,32 +16,31 @@ public class finalDanielCardona {
 
             for (int x = 0; x < 100; x++) {
 
-                lista[x] = br.readLine().split(",");
+                lista[x] = br.readLine().split(";");
 
             }
 
-        } catch (
-
-        Exception e) {
-
+        } catch (Exception e) {
+            System.out.println("error "+e.getMessage());
         }
 
         return lista;
 
     }
 
-
-    
     public static void main(String[] args) {
 
         String[][] lunes = obtenerDia("lunes.txt");
-        String [][] martes = obtenerDia("martes.txt");
+        String[][] martes = obtenerDia("martes.txt");
         String[][] miercoles = obtenerDia("miercoles.txt");
         String[][] jueves = obtenerDia("jueves.txt");
         String[][] viernes = obtenerDia("viernes.txt");
         String[][] sabado = obtenerDia("sabado.txt");
         String[][] domingo = obtenerDia("domingo.txt");
 
+
+
+        
 
     }
 }
