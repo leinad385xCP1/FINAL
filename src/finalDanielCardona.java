@@ -21,11 +21,39 @@ public class finalDanielCardona {
             }
 
         } catch (Exception e) {
-            System.out.println("error "+e.getMessage());
+            System.out.println("error " + e.getMessage());
         }
 
         return lista;
 
+    }
+
+    public static double cantidadTotalPorDia(String[][]lista){
+      
+        double transaccion;
+        double cantidadTotaldia=0;
+
+        for (int x = 0; x < 100; x++) {
+
+            
+            transaccion = Double.parseDouble(lista[x][2]);
+
+            if (Integer.parseInt(lista[x][3]) == 1) {
+
+                transaccion = transaccion * 2;
+
+            }
+            if (Integer.parseInt(lista[x][3]) == 2) {
+
+                transaccion = transaccion * 2.8;
+
+            }
+
+            cantidadTotaldia = transaccion + cantidadTotaldia;
+
+        }
+
+           return cantidadTotaldia;
     }
 
     public static void main(String[] args) {
@@ -39,8 +67,9 @@ public class finalDanielCardona {
         String[][] domingo = obtenerDia("domingo.txt");
 
 
+        double cantidadDiaLunes = cantidadTotalPorDia(lunes);
 
-        
 
     }
+
 }
