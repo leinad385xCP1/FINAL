@@ -58,6 +58,7 @@ public class finalDanielCardona {
 
     public static void main(String[] args) {
 
+        
         String[][] lunes = obtenerDia("lunes.txt");
         String[][] martes = obtenerDia("martes.txt");
         String[][] miercoles = obtenerDia("miercoles.txt");
@@ -67,9 +68,56 @@ public class finalDanielCardona {
         String[][] domingo = obtenerDia("domingo.txt");
 
 
-        double cantidadDiaLunes = cantidadTotalPorDia(lunes);
+        double cantidadLunes = cantidadTotalPorDia(lunes);
+        double cantidadMartes = cantidadTotalPorDia(martes);
+        double cantidadMiercoles = cantidadTotalPorDia(miercoles);
+        double cantidadJueves = cantidadTotalPorDia(jueves);
+        double cantidadViernes = cantidadTotalPorDia(viernes);
+        double cantidadSabado = cantidadTotalPorDia(sabado);
+        double cantidadDomingo = cantidadTotalPorDia(domingo);
 
+        double mayor = cantidadLunes;
 
+        if (mayor < cantidadMartes) {
+
+            mayor = cantidadMartes;
+            System.out.println("el martes fue el dia donde mas se movio dinero con un total de" + mayor);
+
+        }
+        if (mayor < cantidadMiercoles) {
+
+            mayor = cantidadMiercoles;
+            System.out.println("el miercoles fue el dia donde mas se movio dinero con un total de" + mayor);
+
+        }
+        if (mayor < cantidadJueves) {
+
+            mayor = cantidadJueves;
+            System.out.println("el lunes fue el dia donde mas se movio dinero con un total de" + mayor);
+
+        }
+        if (mayor < cantidadViernes) {
+
+            mayor = cantidadViernes;
+            System.out.println("el lunes fue el dia donde mas se movio dinero con un total de" + mayor);
+
+        }
+        if (mayor < cantidadSabado) {
+
+            mayor = cantidadSabado;
+            System.out.println("el lunes fue el dia donde mas se movio dinero con un total de" + mayor);
+
+        }
+        if (mayor < cantidadDomingo) {
+
+            mayor = cantidadDomingo;
+            System.out.println("el lunes fue el dia donde mas se movio dinero con un total de" + mayor);
+
+        } else {
+
+            System.out.println("el lunes fue el dia donde mas se movio dinero con un total de " + mayor);
+
+        }
     }
-
 }
+
